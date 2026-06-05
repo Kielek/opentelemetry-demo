@@ -129,7 +129,7 @@ click==8.4.1 \
 flask==3.1.3 \
     --hash=sha256:0ef0e52b8a9cd932855379197dd8f94047b359ca0a78695144304cb45f87c9eb \
     --hash=sha256:f4bcbefc124291925f1a26446da31a5178f9483862233b23c0c96a20701f670c
-    # via -r src/llm/requirements.in
+    # via -r requirements.in
 grpcio==1.80.0 \
     --hash=sha256:00168469238b022500e486c1c33916acf2f2a9b2c022202cf8a1885d2e3073c1 \
     --hash=sha256:02e64bb0bb2da14d947a49e6f120a75e947250aebe65f9629b62bb1f5c14e6e9 \
@@ -403,37 +403,50 @@ mmh3==5.2.1 \
     --hash=sha256:fc78739b5ec6e4fb02301984a3d442a91406e7700efbe305071e7fd1c78278f2 \
     --hash=sha256:fceef7fe67c81e1585198215e42ad3fdba3a25644beda8fbdaf85f4d7b93175a \
     --hash=sha256:fd96476f04db5ceba1cfa0f21228f67c1f7402296f0e73fee3513aa680ad237b
+    # via openfeature-flagd-core
+openfeature-flagd-api==1.0.0 \
+    --hash=sha256:58d481c0e4bf806ca94a67e12457a8d1823cf772c1801ce20f50d011d8764b5e \
+    --hash=sha256:81c6624c17ae4e78f842ceef67a87743ad8a360105d47a1fef8722b9eeca0f69
+    # via openfeature-flagd-core
+openfeature-flagd-core==1.0.0 \
+    --hash=sha256:c140259806c20e5fcda40452425131be6b58e4d790d7faa830d9cd89333e13ef \
+    --hash=sha256:e843d395de54dbc83d4d46fcee6cbc276204f3dfe5e8cc24ae3ea7247479c232
     # via openfeature-provider-flagd
-openfeature-provider-flagd==0.2.3 \
-    --hash=sha256:18f491179aed289cf5cd8c7121ea505755303527b201f9dbe0c4ccf28dd3241c \
-    --hash=sha256:6c4ed1d03d08c7f89a7c6050cbade6bf0835611163d0c3bebefb61b941a60acd
-    # via -r src/llm/requirements.in
+openfeature-provider-flagd==0.4.1 \
+    --hash=sha256:385dd478017785b5ae34f85ad4e487bdeab783d8dd7acb2d4da142c05fc256af \
+    --hash=sha256:47cf139c192cfb8c612346975354f6648bd735beff1eac9649434ffc18f1e305
+    # via -r requirements.in
 openfeature-sdk==0.9.0 \
     --hash=sha256:511fd66fe66807e95ea5a18074b559bc18657fe8294be0de4668201e297e98ad \
     --hash=sha256:d65ca82c3f1abc5005b0b54bb4c729db04d7a70595f05dd373b47477b6b176bf
-    # via openfeature-provider-flagd
+    # via
+    #   openfeature-flagd-api
+    #   openfeature-flagd-core
+    #   openfeature-provider-flagd
 panzi-json-logic==1.0.1 \
     --hash=sha256:3010a9b2233330d484f2b6e77a8d86f41830d33bd63c060008c4b576b5fa6076 \
     --hash=sha256:df80ec3902ef6b03d89f28642cf5031d8aa4fd86c17010133ca23415e6652253
-    # via openfeature-provider-flagd
-protobuf==7.35.0 \
-    --hash=sha256:4c4617b83ade0e279d1d2bfe04025a1adb87f9ed657de038620dc0ff959357f6 \
-    --hash=sha256:4cbf5cc286130e06a6c9bbefac442431173906dfcc979712183d4adcc01b37ee \
-    --hash=sha256:66be6c513931c794fa92c080ffee41671390da3d79da219cf9c0c0907f035dda \
-    --hash=sha256:6c0f98f10c8a05ea30f8993dfef2de093d27b490fdae78bb60c8343795d55011 \
-    --hash=sha256:a2efd84605f41e559f1881b0912b44099d0a2ac9bf46b3474823f10fb393b0e6 \
-    --hash=sha256:c13f325cf242bad135c350629eeb5d54b24228eb472fb3e2e9ebbd4c5dc20ca0 \
-    --hash=sha256:f05bcadf9a2a6b8dda047007075135fb7d08c73d9177aabc067e1be46881a201 \
-    --hash=sha256:fcbe42a4ac09d3ec9c987ddfcd956afd0b15f1ff613bd8371bde9405ffd5c8e5
+    # via openfeature-flagd-core
+protobuf==6.33.6 \
+    --hash=sha256:0cd27b587afca21b7cfa59a74dcbd48a50f0a6400cfb59391340ad729d91d326 \
+    --hash=sha256:77179e006c476e69bf8e8ce866640091ec42e1beb80b213c3900006ecfba6901 \
+    --hash=sha256:7d29d9b65f8afef196f8334e80d6bc1d5d4adedb449971fefd3723824e6e77d3 \
+    --hash=sha256:9720e6961b251bde64edfdab7d500725a2af5280f3f4c87e57c0208376aa8c3a \
+    --hash=sha256:a6768d25248312c297558af96a9f9c929e8c4cee0659cb07e780731095f38135 \
+    --hash=sha256:bd56799fb262994b2c2faa1799693c95cc2e22c62f56fb43af311cae45d26f0e \
+    --hash=sha256:c96c37eec15086b79762ed265d59ab204dabc53056e3443e702d2681f4b39ce3 \
+    --hash=sha256:e2afbae9b8e1825e3529f88d514754e094278bb95eadc0e199751cdd9a2e82a2 \
+    --hash=sha256:e9db7e292e0ab79dd108d7f1a94fe31601ce1ee3f7b79e0692043423020b0593 \
+    --hash=sha256:f443a394af5ed23672bc6c486be138628fbe5c651ccbc536873d7da23d1868cf
     # via openfeature-provider-flagd
 python-dotenv==1.2.2 \
     --hash=sha256:1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a \
     --hash=sha256:2c371a91fbd7ba082c2c1dc1f8bf89ca22564a087c2c287cd9b662adde799cf3
-    # via -r src/llm/requirements.in
+    # via -r requirements.in
 python-json-logger==4.1.0 \
     --hash=sha256:132994765cf75bf44554be9aa49b06ef2345d23661a96720262716438141b6b2 \
     --hash=sha256:b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195
-    # via -r src/llm/requirements.in
+    # via -r requirements.in
 pyyaml==6.0.3 \
     --hash=sha256:00c4bdeba853cc34e7dd471f16b4114f4162dc03e6b7afcc2128711f0eca823c \
     --hash=sha256:0150219816b6a1fa26fb4699fb7daa9caf09eb1999f3b70fb6e786805e80375a \
@@ -512,7 +525,7 @@ pyyaml==6.0.3 \
 semver==3.0.4 \
     --hash=sha256:9c824d87ba7f7ab4a1890799cec8596f15c1241cb473404ea1cb0c55e4b04746 \
     --hash=sha256:afc7d8c584a5ed0a11033af086e8af226a9c0b206f313e0301f8dd7b6b589602
-    # via openfeature-provider-flagd
+    # via openfeature-flagd-core
 typing-extensions==4.15.0 \
     --hash=sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466 \
     --hash=sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548
